@@ -1,0 +1,149 @@
+student@Ubuntu-MySQL-VirtualBox:~$ mkdir students
+student@Ubuntu-MySQL-VirtualBox:~$ mkdir mentors
+student@Ubuntu-MySQL-VirtualBox:~$ cd students
+student@Ubuntu-MySQL-VirtualBox:~/students$ touch studets_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/students$ more studets_list.txt
+Вадим Кожушко
+Сергей Спиридонов
+Анастасия Сулоева
+Моренко Анна
+Ольга Шайкова
+Айгуль Аджиева
+Элина Семенова
+Ренат Бартышев
+Александр Корнеев
+Анна Ворошилова
+Alisher Yuldashev
+Лиля Овсянникова
+Елена Микунова
+ЕлизаветаСумитовна Сетх
+Чухланцева Елена
+Felicia Tofan
+Иван Большаков
+Мария Харламова
+Ирина Комарова
+Максим Малыщицкий
+Артём Жуликов
+Григорий Герасимов
+Марина Демина
+Герман Барышев
+Алексей Пикулик
+Максим Гаврюшин
+МартаАлександровна Химич
+Любовь Муратова
+Екатерина Герасимова
+Сергей Васенин
+Фёдор Марков
+Татьяна Кияшко
+student@Ubuntu-MySQL-VirtualBox:~/students$ 
+student@Ubuntu-MySQL-VirtualBox:~/students$ cd
+student@Ubuntu-MySQL-VirtualBox:~$ cd mentors
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ touch mentors_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ more mentors_list.txt
+Наставник
+Евгений Афонин
+Преподаватель
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ sudo mv mentors_list.txt /home/students/
+[sudo] пароль для student: 
+mv: невозможно переместить 'mentors_list.txt' в '/home/students/': Это не каталог
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ sudo mv mentors_list.txt /home/students/
+mv: невозможно переместить 'mentors_list.txt' в '/home/students/': Это не каталог
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ sudo mv mentors_list.txt /home/students
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ ls
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ cd
+student@Ubuntu-MySQL-VirtualBox:~$ cd students/
+student@Ubuntu-MySQL-VirtualBox:~/students$ ls
+studets_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/students$ ls -a
+.  ..  studets_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/students$ ls -la
+итого 12
+drwxrwxr-x  2 student student 4096 фев  7 17:08 .
+drwxr-xr-x 26 student student 4096 фев  7 17:17 ..
+-rw-rw-r--  1 student student  956 фев  7 17:08 studets_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/students$ cd
+student@Ubuntu-MySQL-VirtualBox:~$ cd mentors/
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ touch mentors_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ more mentors_list.txt 
+Наставник
+Евгений Афонин
+
+Преподаватель
+Кирилл Иванов
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ mv mentors_list.txt /home/students
+mv: невозможно переместить 'mentors_list.txt' в '/home/students': Отказано в доступе
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ mv mentors_list.txt /home/student
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ cd
+student@Ubuntu-MySQL-VirtualBox:~$ cd 
+1/                .dbus/            mentors/          .swt/             Музыка/
+.cache/           .eclipse/         .mozilla/         Видео/            Общедоступные/
+.config/          .gconf/           .mysql/           Документы/        Рабочий стол/
+.dbeaver4/        .gnupg/           .nano/            Загрузки/         Шаблоны/
+.dbeaver-drivers/ .local/           students/         Изображения/      
+student@Ubuntu-MySQL-VirtualBox:~$ cd mentors/
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ touch mentors_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ sudo mv mentors_list.txt /home/students
+student@Ubuntu-MySQL-VirtualBox:~/mentors$ cd
+student@Ubuntu-MySQL-VirtualBox:~$ cd students/
+student@Ubuntu-MySQL-VirtualBox:~/students$ ls
+mentors_list.txt  studets_list.txt
+student@Ubuntu-MySQL-VirtualBox:~/students$ cd
+student@Ubuntu-MySQL-VirtualBox:~$ rm m*
+rm: невозможно удалить 'mentors': Это каталог
+student@Ubuntu-MySQL-VirtualBox:~$ rm m* -r
+student@Ubuntu-MySQL-VirtualBox:~$ ls
+1                 students  Документы  Изображения  Общедоступные  Шаблоны
+examples.desktop  Видео     Загрузки   Музыка       Рабочий стол
+student@Ubuntu-MySQL-VirtualBox:~$ mv students students_and_mentors
+student@Ubuntu-MySQL-VirtualBox:~$ ls
+1                 students_and_mentors  Документы  Изображения  Общедоступные  Шаблоны
+examples.desktop  Видео                 Загрузки   Музыка       Рабочий стол
+student@Ubuntu-MySQL-VirtualBox:~$ rm s* -rf
+student@Ubuntu-MySQL-VirtualBox:~$ ls
+1  examples.desktop  Видео  Документы  Загрузки  Изображения  Музыка  Общедоступные  Рабочий стол  Шаблоны
+student@Ubuntu-MySQL-VirtualBox:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Microsoft Windows [Version 10.0.19045.2486]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\Pavel> ssh 172.16.0.143@student
+ssh: Could not resolve hostname student: \335\362\356\362 \365\356\361\362 \355\345\350\347\342\345\361\362\345\355.
+
+C:\Users\Pavel>ssh student@172.16.0.143
+student@172.16.0.143's password:
+Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.15.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+Может быть обновлён 461 пакет.
+405 обновлений касаются безопасности системы.
+
+New release '18.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+Last login: Tue Feb  7 16:25:02 2023 from 172.16.0.172
+student@Ubuntu-MySQL-VirtualBox:~$
